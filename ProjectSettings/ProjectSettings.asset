@@ -542,6 +542,7 @@ PlayerSettings:
   - serializedVersion: 2
     m_BuildTarget: Android
     m_EncodingQuality: 1
+  m_BuildTargetGroupHDRCubemapEncodingQuality: []
   m_BuildTargetGroupLightmapSettings: []
   m_BuildTargetGroupLoadStoreDebugModeSettings: []
   m_BuildTargetNormalMapEncoding:
@@ -915,11 +916,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: beb3239e-5823-4f9d-b2e8-08b9068fc397
+  cloudProjectId: 9c9c2c47-c8f9-4b2b-8d6d-56ab6f78fe45
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Laboratorio5
-  organizationId: fabigom9603
+  projectName: GameJam2-Geneartion-Equipo3
+  organizationId: dhako
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
