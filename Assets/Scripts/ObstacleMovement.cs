@@ -14,9 +14,9 @@ public class ObstacleMovement : MonoBehaviour
         transform.Translate(Vector3.right * direction * speed * Time.deltaTime);
         if (transform.position.x > 13f)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
         if(transform.position.y<-2)
-            Destroy(gameObject);
+            gameObject.SetActive(false);
     }
 }
