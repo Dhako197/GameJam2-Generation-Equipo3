@@ -5,58 +5,108 @@ public class NewMonoBehaviourScript : MonoBehaviour
     public float knockbackForce = 500f;
     private Rigidbody rb;
 
-    private float speed = 20f;          // Velocidad de movimiento
-    private float minZ = -3f;          // Límite inferior en Z
-    private float maxZ = 3f;           // Límite superior en Z
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public float laneOffset = 3f;            // Distancia entre carriles
+    public float laneSwitchSpeed = 10f;      // Velocidad de interpolación entre carriles
+    private int currentLane = 1;             // 0 = izquierda, 1 = centro, 2 = derecha
+
+    public float jumpForce = 7f;
+    public float fastFallForce = 20f;
+    private bool isGrounded = true;
+    
+    private Vector3 targetPosition;
+    
+    private bool noHit = true;
+    
+    
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        targetPosition = transform.position;
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        float inputZ = Input.GetAxis("Horizontal"); // Usa W/S o flechas ↑↓
-        Vector3 move = new Vector3(0, 0, inputZ) * speed * Time.deltaTime;
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        {
+            Jump();
+        }
+        if (Input.GetKey(KeyCode.S) && !isGrounded)
+        {
+            rb.AddForce(Vector3.down * fastFallForce, ForceMode.Acceleration);
+        }
+        
+        // Movimiento lateral por carriles
+        if (Input.GetKeyDown(KeyCode.A) && currentLane > 0)
+        {
+            currentLane--;
+            SetTargetPosition();
+        }
+        else if (Input.GetKeyDown(KeyCode.D) && currentLane < 2)
+        {
+            currentLane++;
+            SetTargetPosition();
+        }
+        
+        // Movimiento hacia el carril objetivo
+        if (noHit)
+        {
+            Vector3 newPos = new Vector3(
+                transform.position.x,
+                transform.position.y,
+               Mathf.Lerp(transform.position.z, targetPosition.z,Time.deltaTime * laneSwitchSpeed ));
 
-        transform.Translate(move);
+            transform.position = newPos;
+           
+        }
+        
 
-        // Limitar el movimiento en Z
-        Vector3 pos = transform.position;
-        pos.z = Mathf.Clamp(pos.z, minZ, maxZ);
-        transform.position = pos;
-
-        if (transform.position.x > 13f)
+        // Limitar caída o salir del área
+        if (transform.position.x > 100f) // o usa un valor adecuado
         {
             Destroy(gameObject);
         }
-        if (transform.position.y < -2)
+
+        if (transform.position.y < -2f)
+        {
             Destroy(gameObject);
+        }
+    }
+
+    void SetTargetPosition()
+    {
+        float z = (currentLane - 1) * laneOffset; // -1 para centrar el carril medio en z=0
+        Vector3 currentPosition = transform.position;
+        targetPosition = new Vector3(currentPosition.x, currentPosition.y, z);
+    }
+    void Jump()
+    {
+        rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        isGrounded = false;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-
-
         if (collision.gameObject.CompareTag("Obstacle"))
         {
-            // Aplica una fuerza hacia atrás y hacia arriba
+            noHit = false;
             Vector3 knockbackDirection = (transform.position - collision.transform.position).normalized + Vector3.up;
             rb.AddForce(knockbackDirection * knockbackForce);
-
             /*
-            if (currentLives > 0)
-            {
-                StartCoroutine(RespawnAfterDelay(1.5f)); // Tiempo para que "vuele"
-            }
-            else
-            {
-                Debug.Log("Game Over");
-                // Aquí podrías añadir lógica de game over
-            }*/
+          if (currentLives > 0)
+          {
+              StartCoroutine(RespawnAfterDelay(1.5f)); // Tiempo para que "vuele"
+          }
+          else
+          {
+              Debug.Log("Game Over");
+              // Aquí podrías añadir lógica de game over
+          }*/
         }
-
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = true;
+        }
     }
 }
 
