@@ -25,7 +25,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         targetPosition = transform.position;
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
