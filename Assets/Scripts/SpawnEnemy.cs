@@ -66,6 +66,11 @@ public class SpawnEnemy : MonoBehaviour
             {
                 enemigo.transform.position = posicionSpawn;
                 enemigo.SetActive(true);
+                AudioSource audio = GetComponent<AudioSource>();
+                if (audio != null && !audio.isPlaying)
+                {
+                    audio.Play();
+                }
                 break;
             }
         }

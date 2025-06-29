@@ -12,11 +12,18 @@ public class ObstacleMovement : MonoBehaviour
     {
         // Movimiento en eje X
         transform.Translate(Vector3.right * direction * speed * Time.deltaTime);
-        if (transform.position.x > 13f)
+        if (transform.position.x > 13f) {
+            
+                // Sumar puntaje
+                ScoreManager.Instance?.SumarPuntaje(5); // Puedes ajustar el valor
+                gameObject.SetActive(false);
+            
+        }
+        if (transform.position.y < -2)
         {
+            // Sumar puntaje
+            ScoreManager.Instance?.SumarPuntaje(5); // Puedes ajustar el valor
             gameObject.SetActive(false);
         }
-        if(transform.position.y<-2)
-            gameObject.SetActive(false);
     }
 }

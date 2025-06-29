@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 public class EnemyShooter : MonoBehaviour
@@ -9,6 +9,11 @@ public class EnemyShooter : MonoBehaviour
     private float timer;
     private ProjectilePooler pooler;
     private bool puedeDisparar = false;
+
+
+    [Header("Efectos de disparo")]
+    public ParticleSystem shootParticle;
+    public AudioClip shootSound;
 
     void Awake()
     {
@@ -54,13 +59,26 @@ public class EnemyShooter : MonoBehaviour
     {
         GameObject proj = pooler.GetProjectile();
 
-        // Posici�n del firePoint
+        // Posición del firePoint
         proj.transform.position = firePoint.position;
 
-        // Rotaci�n levemente hacia abajo
+        // Rotación levemente hacia abajo
         Vector3 direccion = (firePoint.forward + Vector3.down * 0.1f).normalized;
         proj.transform.rotation = Quaternion.LookRotation(direccion);
 
         proj.SetActive(true);
+
+        if (shootParticle != null)
+        {
+            shootParticle.transform.position = firePoint.position;
+            shootParticle.transform.rotation = firePoint.rotation;
+            shootParticle.Play();
+        }
+
+        // Reproducir sonido (si está asignado)
+        if (shootSound != null)
+        {
+            AudioSource.PlayClipAtPoint(shootSound, firePoint.position);
+        }
     }
 }

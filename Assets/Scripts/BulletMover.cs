@@ -6,10 +6,22 @@ public class BulletMover : MonoBehaviour
     public float maxDistance = 45f;
 
     private Vector3 startPosition;
+    private ParticleSystem efectoParticula;
+
+    private void Awake()
+    {
+        efectoParticula = GetComponentInChildren<ParticleSystem>();
+    }
 
     void OnEnable()
     {
         startPosition = transform.position;
+        if (efectoParticula != null)
+        {
+            efectoParticula.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            efectoParticula.Simulate(1f, true, true); // Omitir lo anterior
+            efectoParticula.Play();
+        }
     }
 
     void Update()
