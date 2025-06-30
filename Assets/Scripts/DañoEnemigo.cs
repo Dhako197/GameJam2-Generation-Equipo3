@@ -18,5 +18,10 @@ public class DañoEnemigo : MonoBehaviour
             // desactivar Objeto
             gameObject.SetActive(false);
         }
+        if (other.CompareTag("Escudo"))
+        {
+            gameObject.SetActive(false);
+            Debug.Log("Player Protegido");
+        }
     }
 }

@@ -6,6 +6,7 @@ public class VidaUIManager : MonoBehaviour
 {
     public List<RawImage> iconosVida; // Asignar en el Inspector
     private int vidasRestantes;
+    private int vidasMaximas = 3;
 
     void Start()
     {
@@ -13,6 +14,13 @@ public class VidaUIManager : MonoBehaviour
         ActualizarUI();
     }
 
+    public void AgregarVida()
+    {
+        if (vidasRestantes >= vidasMaximas) return;
+
+        iconosVida[vidasRestantes].enabled = true;
+        vidasRestantes++;
+    }
     public void QuitarVida()
     {
         if (vidasRestantes <= 0) return;
@@ -26,6 +34,7 @@ public class VidaUIManager : MonoBehaviour
 
         if (vidasRestantes <= 0)
         {
+            GameManager.Instance?.FinJuego();
             Debug.Log("¡Jugador sin vidas!");
             // Aquí puedes llamar a un GameOver o algo más
         }
