@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
 
         Time.timeScale = 0f;
         juegoPausado = true;
-        AudioListener.pause = true; // Pausa el audio también
+        AudioListener.pause = true; // Pausa el audio tambiÃ©n
         textFinJuego.SetActive(true);
 
     }
@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0f;
         juegoPausado = true;
-        AudioListener.pause = true; // Pausa el audio también
+        AudioListener.pause = true; // Pausa el audio tambiÃ©n
     }
 
     public void ReanudarJuego()
@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
         return juegoPausado;
     }
 
-    // Puedes usar este método si quieres alternar con una tecla
+    // Puedes usar este mÃ©todo si quieres alternar con una tecla
     public void TogglePausa()
     {
         if (juegoPausado)
