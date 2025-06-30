@@ -1,10 +1,13 @@
+using FirstGearGames.SmoothCameraShaker;
 using UnityEngine;
 
-public class DañoEnemigo : MonoBehaviour
+public class DaÃ±oEnemigo : MonoBehaviour
 {
     //public enum TipoPeligro { Enemigo, Proyectil, Obstaculo }
     //public TipoPeligro tipo;
     public int puntajeARestar = 5;
+    public AudioClip hitAudio;
+    public ShakeData hitShake;
    
     void OnTriggerEnter(Collider other)
     {
@@ -15,7 +18,13 @@ public class DañoEnemigo : MonoBehaviour
             // Quitar una vida visual
             VidaUIManager vidaUI = FindObjectOfType<VidaUIManager>();
             vidaUI?.QuitarVida();
+            
+            PlayerVfX playerVfX= other.GetComponent<PlayerVfX>();
+            if(playerVfX != null) playerVfX.PlayParticles();
+            CameraShakerHandler.Shake(hitShake);
+            
             // desactivar Objeto
+            AudioManager.Instance.PlaySound(hitAudio);
             gameObject.SetActive(false);
         }
         if (other.CompareTag("Escudo"))

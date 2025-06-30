@@ -155,3 +155,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puntajeARestar: 5
+  hitAudio: {fileID: 8300000, guid: f72b48568279e414dbc9a6db3be15457, type: 3}
+  hitShake: {fileID: 11400000, guid: e2340b8aebe121a4c8613ae5c22dbf4d, type: 2}
