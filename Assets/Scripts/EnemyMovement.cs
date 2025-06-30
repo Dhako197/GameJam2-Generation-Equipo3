@@ -95,6 +95,8 @@ public class EnemyMovement : MonoBehaviour
                     pooler.DisableAllProjectiles();
                 }
 
+                // Sumar puntaje
+                ScoreManager.Instance?.SumarPuntaje(10); // Puedes ajustar el valor
                 gameObject.SetActive(false);
             }
         }
