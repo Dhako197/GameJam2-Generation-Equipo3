@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("Cyber Menss");
+        SceneManager.LoadScene("introcomic");
     }
 
     public void ShowCredits()
