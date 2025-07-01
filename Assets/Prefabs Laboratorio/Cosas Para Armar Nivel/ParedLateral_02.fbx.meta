@@ -1,0 +1,297 @@
+fileFormatVersion: 2
+guid: b9c2e897bc3e374478c1e77510592a3c
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Panel_sciana_baseColor
+    second: {fileID: 2800000, guid: f7218986999a2524f932f84cb22be32b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Panel_sciana_emissive
+    second: {fileID: 2800000, guid: 11daf7307c9ff024b850eeae93242308, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Panel_sciana_normal
+    second: {fileID: 2800000, guid: 66df0bcc50d92da438ecf09fc8e244f6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Panel_sterowania_baseColor
+    second: {fileID: 2800000, guid: 884a62690e5a1d9479fe615e778fe7ff, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Panel_sterowania_emissive
+    second: {fileID: 2800000, guid: 6c7da21123848aa49b6ff3013fa8bd6d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Panel_sterowania_normal
+    second: {fileID: 2800000, guid: 5b4155bc739fd2e438cef90790939ba6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Podoga2_baseColor
+    second: {fileID: 2800000, guid: 38cfb0cf4de08f444beb1373d748caae, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Podoga2_emissive
+    second: {fileID: 2800000, guid: 5297cd50d24ccf64a8cae0425f1ca215, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Podoga2_normal
+    second: {fileID: 2800000, guid: bdca82dc746a19a4785a918409e99025, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: SCIANA_DUZA_baseColor
+    second: {fileID: 2800000, guid: c63c5490d6fca824c83711c0f4dad5cd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: SCIANA_DUZA_emissive
+    second: {fileID: 2800000, guid: 81b9daeecde86d246a040810bbe5566e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: SCIANA_DUZA_normal
+    second: {fileID: 2800000, guid: 014d8915c5eeccf4187690263317b24c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: SCIANA_PODLOGA_baseColor
+    second: {fileID: 2800000, guid: 0e5fbcc4333e3e84ca0752c651bb0142, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: SCIANA_PODLOGA_emissive
+    second: {fileID: 2800000, guid: 6a60717640f684544ab9fcb9d5a01148, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: SCIANA_PODLOGA_normal
+    second: {fileID: 2800000, guid: d2ac86ea6d220c547b1491f538c1d04f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: rura_przod_baseColor
+    second: {fileID: 2800000, guid: f7e4f4d748f7edf46afe38fdbc254c9c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: rura_przod_emissive
+    second: {fileID: 2800000, guid: d31444033ee9c5f4cbc07efe4d0d8f6e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: rura_przod_normal
+    second: {fileID: 2800000, guid: 1e0c78b873a2f2441acc02097f846031, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: rura_tylna_baseColor
+    second: {fileID: 2800000, guid: e0ff876c7c79237498a081dde6ffbf79, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: rura_tylna_emissive
+    second: {fileID: 2800000, guid: b348950fad890ef489c0ecdb6517c085, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: rura_tylna_normal
+    second: {fileID: 2800000, guid: d4d22efe857f26a4abbcb37d49483f71, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: sciana3_baseColor
+    second: {fileID: 2800000, guid: bed668e1b65c97743aab167c6f96fc2e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: sciana3_normal
+    second: {fileID: 2800000, guid: d8e37b8acd6c1194cace37d256c2f458, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: soik_may_baseColor
+    second: {fileID: 2800000, guid: bb422f2d6e4bcb74385e6d45b33ed2a8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: soik_may_emissive
+    second: {fileID: 2800000, guid: 70d575124de42bb4d8d4cb69d53b7610, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: soik_may_normal
+    second: {fileID: 2800000, guid: 4d272808e0532a146bdfa8a2ff11f2bb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: soik_may_szybka_baseColor
+    second: {fileID: 2800000, guid: f149886b9c6f6d04c9b0cc37109276fa, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: soik_may_szybka_emissive
+    second: {fileID: 2800000, guid: 77db0c2d9c9707a47bdd1455cec83ea9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: soik_may_szybka_normal
+    second: {fileID: 2800000, guid: bfdcf47bd80be3d418f9c1f3c4bfca02, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: stolik_baseColor
+    second: {fileID: 2800000, guid: 0721afb0fa2e8a74a93e130b456d8ee2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: stolik_emissive
+    second: {fileID: 2800000, guid: dd46f53c890799a43bcb7cef362dd886, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: stolik_normal
+    second: {fileID: 2800000, guid: 9e1ea6893f0f9124588d4bc09792b3f9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: szafka_body_baseColor
+    second: {fileID: 2800000, guid: e7f596d508aae0949bad05e05d0cb99b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: szafka_body_emissive
+    second: {fileID: 2800000, guid: 33359be2c793e3042963856656011ff8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: szafka_body_normal
+    second: {fileID: 2800000, guid: 74f3c6f3ffa4f2747b9f3f8b546439e5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: szafka_szybka_baseColor
+    second: {fileID: 2800000, guid: ad89e7db83396f24089627b63e0cb634, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: szafka_szybka_emissive
+    second: {fileID: 2800000, guid: 697180738e5a32d4bbcd7b79d51f567b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: szafka_szybka_normal
+    second: {fileID: 2800000, guid: f8a10c01adf3db34baec18e5a18b1370, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

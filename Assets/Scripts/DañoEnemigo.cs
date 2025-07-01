@@ -7,6 +7,7 @@ public class DañoEnemigo : MonoBehaviour
     //public TipoPeligro tipo;
     public int puntajeARestar = 5;
     public AudioClip hitAudio;
+    public AudioClip AudioEscudo;
     public ShakeData hitShake;
    
     void OnTriggerEnter(Collider other)
@@ -30,7 +31,8 @@ public class DañoEnemigo : MonoBehaviour
         if (other.CompareTag("Escudo"))
         {
             gameObject.SetActive(false);
-            Debug.Log("Player Protegido");
+            AudioManager.Instance.PlaySound(AudioEscudo);
+            CameraShakerHandler.Shake(hitShake);
         }
     }
 }

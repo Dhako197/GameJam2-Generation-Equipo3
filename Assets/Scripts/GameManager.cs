@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // Opcional
+            //DontDestroyOnLoad(gameObject); // Opcional
         }
         else
         {
@@ -55,5 +55,14 @@ public class GameManager : MonoBehaviour
             ReanudarJuego();
         else
             PausarJuego();
+    }
+
+    public bool enLaboratorio(int puntaje)
+    {
+        if (puntaje > 300)
+        {
+            return false;
+        }
+        return true;
     }
 }

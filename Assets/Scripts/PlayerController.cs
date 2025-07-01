@@ -9,7 +9,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     public float laneSwitchSpeed = 10f;      // Velocidad de interpolación entre carriles
     private int currentLane = 1;             // 0 = izquierda, 1 = centro, 2 = derecha
 
-    public float jumpForce = 7f;
+    public float jumpForce = 5f;
     public float fastFallForce = 20f;
     private bool isGrounded = true;
     

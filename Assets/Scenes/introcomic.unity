@@ -302,11 +302,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c316fe0cc378e14296a17cefc33a386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  comicPages: []
-  displayImage: {fileID: 0}
-  clickText: {fileID: 0}
-  audioSource: {fileID: 0}
-  pageTurnSound: {fileID: 0}
+  comicPages:
+  - {fileID: 21300000, guid: 6cf71bdb89b88104099669ea76dd5dd9, type: 3}
+  - {fileID: 21300000, guid: 753e84b212d8da04fa78b22eb8486148, type: 3}
+  - {fileID: 21300000, guid: 7704d24bc3874cd4d8fee039fa8eb57e, type: 3}
+  - {fileID: 21300000, guid: cdd4c8f77604144428b23f4cac02dba9, type: 3}
+  displayImage: {fileID: 1874925139}
+  clickText: {fileID: 1941155887}
+  audioSource: {fileID: 1876777014}
+  pageTurnSound: {fileID: 8300000, guid: 7487a711c7b7fb040a22811a98212e39, type: 3}
   blinkInterval: 0.5
 --- !u!1 &210713119
 GameObject:
@@ -842,8 +846,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 1000
+  MaxDistance: 1010
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
