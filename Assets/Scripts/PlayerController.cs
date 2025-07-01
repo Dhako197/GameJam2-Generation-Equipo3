@@ -16,12 +16,15 @@ public class NewMonoBehaviourScript : MonoBehaviour
     private Vector3 targetPosition;
     
     private bool noHit = true;
+
+    private Animator animator;
     
     
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
         targetPosition = transform.position;
     }
 
@@ -83,6 +86,8 @@ public class NewMonoBehaviourScript : MonoBehaviour
     {
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         isGrounded = false;
+        animator.SetBool("IsHighJump", true);
+    
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -106,6 +111,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
+            animator.SetBool("IsHighJump", false);
         }
     }
 }
